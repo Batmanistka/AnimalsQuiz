@@ -1,5 +1,5 @@
 package com.example.android.quiz;
-
+//questions, images and answers
 public class Questions {
 
     public static String [] mQuestions = {
