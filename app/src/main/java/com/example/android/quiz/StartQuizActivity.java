@@ -76,7 +76,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         public void run() {
                             mButtonChoice1.setBackgroundColor(getResources().getColor(R.color.my_gray));
                         }
-                    }, 1000);
+                    }, 700);
 
                     Toast.makeText(StartQuizActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
@@ -99,7 +99,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         public void run() {
                             mButtonChoice1.setBackgroundColor(getResources().getColor(R.color.my_gray));
                         }
-                    }, 1000);
+                    }, 700);
                     Toast.makeText(StartQuizActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     mQuestionNumber = mQuestionNumber + 1;
                     updateQuestionNumber(mQuestionNumber);
@@ -137,7 +137,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         public void run() {
                             mButtonChoice2.setBackgroundColor(getResources().getColor(R.color.my_gray));
                         }
-                    }, 1000);
+                    }, 700);
 
                     Toast.makeText(StartQuizActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
@@ -161,7 +161,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         public void run() {
                             mButtonChoice2.setBackgroundColor(getResources().getColor(R.color.my_gray));
                         }
-                    }, 1000);
+                    }, 700);
 
                     Toast.makeText(StartQuizActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     mQuestionNumber = mQuestionNumber + 1;
@@ -200,7 +200,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         public void run() {
                             mButtonChoice3.setBackgroundColor(getResources().getColor(R.color.my_gray));
                         }
-                    }, 1000);
+                    }, 700);
 
                     Toast.makeText(StartQuizActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
@@ -225,7 +225,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         public void run() {
                             mButtonChoice3.setBackgroundColor(getResources().getColor(R.color.my_gray));
                         }
-                    }, 1000);
+                    }, 700);
 
                     Toast.makeText(StartQuizActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     mQuestionNumber = mQuestionNumber + 1;
@@ -267,7 +267,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         public void run() {
                             mButtonChoice4.setBackgroundColor(getResources().getColor(R.color.my_gray));
                         }
-                    }, 1000);
+                    }, 700);
 
                     Toast.makeText(StartQuizActivity.this, "correct", Toast.LENGTH_SHORT).show();
 
@@ -292,7 +292,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         public void run() {
                             mButtonChoice4.setBackgroundColor(getResources().getColor(R.color.my_gray));
                         }
-                    }, 1000);
+                    }, 700);
 
                     Toast.makeText(StartQuizActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     mQuestionNumber = mQuestionNumber + 1;

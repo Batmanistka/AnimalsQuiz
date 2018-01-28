@@ -31,9 +31,9 @@ public class EndQuizActivity extends AppCompatActivity {
         }else if (score == 9) {
             mCongrats.setText("Great Result!");
         }else if (score == 8) {
-            mCongrats.setText("Nice");
+            mCongrats.setText("Nice!");
         }else if (score == 7) {
-            mCongrats.setText("Not bad");
+            mCongrats.setText("Not bad :)");
         }else if (score<7) {
             mCongrats.setText("It could be better - maybe it's time for a nature movie?;)");
         }
