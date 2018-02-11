@@ -38,6 +38,8 @@ public class StartQuizActivity extends AppCompatActivity {
     public int mScore;
     private int mQuestionValue;
     private int mQuestionNumber;
+    public String name;
+
 
 
     @Override
@@ -48,6 +50,10 @@ public class StartQuizActivity extends AppCompatActivity {
         mScore = 0;
         mQuestionValue = 0;
         mQuestionNumber = 1;
+
+        Intent cdName = getIntent();
+        name = cdName.getStringExtra("user_name");
+
 
         mQuestionNumberView = (TextView) findViewById(R.id.question_number_view);
         mQuestionView = (TextView) findViewById(R.id.question);
@@ -82,6 +88,7 @@ public class StartQuizActivity extends AppCompatActivity {
 
                     if (mQuestionValue == Questions.mQuestions.length) {
                         Intent i = new Intent(StartQuizActivity.this, EndQuizActivity.class);
+                        i.putExtra("user_name", name);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
                         i.putExtras(bundle);
@@ -106,6 +113,7 @@ public class StartQuizActivity extends AppCompatActivity {
 
                     if (mQuestionValue == Questions.mQuestions.length) {
                         Intent i = new Intent(StartQuizActivity.this, EndQuizActivity.class);
+                        i.putExtra("user_name", name);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
                         i.putExtras(bundle);
@@ -143,6 +151,7 @@ public class StartQuizActivity extends AppCompatActivity {
 
                     if (mQuestionValue == Questions.mQuestions.length) {
                         Intent i = new Intent(StartQuizActivity.this, EndQuizActivity.class);
+                        i.putExtra("user_name", name);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
                         i.putExtras(bundle);
@@ -169,6 +178,7 @@ public class StartQuizActivity extends AppCompatActivity {
 
                     if (mQuestionValue == Questions.mQuestions.length) {
                         Intent i = new Intent(StartQuizActivity.this, EndQuizActivity.class);
+                        i.putExtra("user_name", name);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
                         i.putExtras(bundle);
@@ -206,6 +216,7 @@ public class StartQuizActivity extends AppCompatActivity {
 
                     if (mQuestionValue == Questions.mQuestions.length) {
                         Intent i = new Intent(StartQuizActivity.this, EndQuizActivity.class);
+                        i.putExtra("user_name", name);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
                         i.putExtras(bundle);
@@ -233,6 +244,7 @@ public class StartQuizActivity extends AppCompatActivity {
 
                     if (mQuestionValue == Questions.mQuestions.length) {
                         Intent i = new Intent(StartQuizActivity.this, EndQuizActivity.class);
+                        i.putExtra("user_name", name);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
                         i.putExtras(bundle);
@@ -273,6 +285,7 @@ public class StartQuizActivity extends AppCompatActivity {
 
                     if (mQuestionValue == Questions.mQuestions.length) {
                         Intent i = new Intent(StartQuizActivity.this, EndQuizActivity.class);
+                        i.putExtra("user_name", name);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
                         i.putExtras(bundle);
@@ -301,6 +314,7 @@ public class StartQuizActivity extends AppCompatActivity {
 
                     if (mQuestionValue == Questions.mQuestions.length) {
                         Intent i = new Intent(StartQuizActivity.this, EndQuizActivity.class);
+                        i.putExtra("user_name", name);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
                         i.putExtras(bundle);

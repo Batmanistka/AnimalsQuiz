@@ -9,17 +9,26 @@ import android.widget.TextView;
 
 public class EndQuizActivity extends AppCompatActivity {
 
-    TextView mCongrats, mFinalScore;
+    TextView mUserName, mCongrats, mFinalScore;
     Button mRetryButton;
+    String nameString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end_quiz);
 
+
         mCongrats = (TextView)findViewById(R.id.congrats);
         mFinalScore = (TextView)findViewById(R.id.result);
         mRetryButton = (Button)findViewById(R.id.retry_button);
+        mUserName = (TextView)findViewById(R.id.user_name);
+
+
+        Intent intentName = getIntent();
+        nameString = intentName.getStringExtra("user_name");
+        mUserName.setText(nameString);
+
 
         Bundle bundle = getIntent().getExtras();
         int score = bundle.getInt("finalScore");
@@ -41,7 +50,9 @@ public class EndQuizActivity extends AppCompatActivity {
         mRetryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(EndQuizActivity.this, StartQuizActivity.class));
+                Intent intentName = new Intent(EndQuizActivity.this, StartQuizActivity.class);
+                intentName.putExtra("user_name", nameString);
+                startActivity(intentName);
             }
         });
 
