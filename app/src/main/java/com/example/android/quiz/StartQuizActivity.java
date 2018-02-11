@@ -339,7 +339,6 @@ public class StartQuizActivity extends AppCompatActivity {
         outState.putString("Button_4", mButtonChoice4.getText().toString());
         Bitmap bitmap = ((BitmapDrawable)mImageView.getDrawable()).getBitmap();
         outState.putParcelable("Bitmap", bitmap);
-
     }
 
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -352,7 +351,6 @@ public class StartQuizActivity extends AppCompatActivity {
         mButtonChoice4.setText(savedInstanceState.getString("Button_4"));
         Bitmap bitmap = (Bitmap) savedInstanceState.getParcelable("Bitmap");
         mImageView.setImageBitmap(bitmap);
-
     }
 
     public void updateQuestion() {
