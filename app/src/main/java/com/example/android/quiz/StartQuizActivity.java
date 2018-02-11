@@ -3,9 +3,13 @@ package com.example.android.quiz;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.media.Image;
 import android.os.Handler;
+import android.os.Parcelable;
 import android.os.PersistableBundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -29,7 +33,7 @@ public class StartQuizActivity extends AppCompatActivity {
 
     private TextView mQuestionNumberView;
     private TextView mQuestionView;
-    private ImageView mImageView;
+    public ImageView mImageView;
     private Button mButtonChoice1;
     private Button mButtonChoice2;
     private Button mButtonChoice3;
@@ -41,11 +45,11 @@ public class StartQuizActivity extends AppCompatActivity {
     public String name;
 
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_quiz);
+
 
         mScore = 0;
         mQuestionValue = 0;
@@ -63,8 +67,6 @@ public class StartQuizActivity extends AppCompatActivity {
         mButtonChoice3 = (Button) findViewById(R.id.answer_3);
         mButtonChoice4 = (Button) findViewById(R.id.answer_4);
         updateQuestion();
-
-
 
         //When user click first button
         mButtonChoice1.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +96,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         i.putExtras(bundle);
                         StartQuizActivity.this.finish();
                         startActivity(i);
-                    }else {
+                    } else {
                         updateQuestion();
                     }
 
@@ -119,13 +121,12 @@ public class StartQuizActivity extends AppCompatActivity {
                         i.putExtras(bundle);
                         StartQuizActivity.this.finish();
                         startActivity(i);
-                    }else {
+                    } else {
                         updateQuestion();
                     }
                 }
             }
         });
-
 
         //When user click second button
         mButtonChoice2.setOnClickListener(new View.OnClickListener() {
@@ -157,7 +158,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         i.putExtras(bundle);
                         StartQuizActivity.this.finish();
                         startActivity(i);
-                    }else {
+                    } else {
                         updateQuestion();
                     }
 
@@ -184,7 +185,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         i.putExtras(bundle);
                         StartQuizActivity.this.finish();
                         startActivity(i);
-                    }else {
+                    } else {
                         updateQuestion();
                     }
                 }
@@ -222,7 +223,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         i.putExtras(bundle);
                         StartQuizActivity.this.finish();
                         startActivity(i);
-                    }else {
+                    } else {
                         updateQuestion();
 
                     }
@@ -250,7 +251,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         i.putExtras(bundle);
                         StartQuizActivity.this.finish();
                         startActivity(i);
-                    }else {
+                    } else {
                         updateQuestion();
                     }
                 }
@@ -264,7 +265,6 @@ public class StartQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //if button is clicked counter get + 1
-
                 if (mButtonChoice4.getText() == mAnswer) {
                     //updates the score
                     mScore = mScore + 1;
@@ -292,7 +292,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         StartQuizActivity.this.finish();
                         startActivity(i);
 
-                    }else {
+                    } else {
                         updateQuestion();
                     }
 
@@ -320,7 +320,7 @@ public class StartQuizActivity extends AppCompatActivity {
                         i.putExtras(bundle);
                         StartQuizActivity.this.finish();
                         startActivity(i);
-                    }else {
+                    } else {
                         updateQuestion();
                     }
                 }
@@ -328,9 +328,36 @@ public class StartQuizActivity extends AppCompatActivity {
         });
     }
 
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        // saving the content of textview and image using the key
+        outState.putString("Question_Number", mQuestionNumberView.getText().toString());
+        outState.putString("Question_View", mQuestionView.getText().toString());
+        outState.putString("Button_1", mButtonChoice1.getText().toString());
+        outState.putString("Button_2", mButtonChoice2.getText().toString());
+        outState.putString("Button_3", mButtonChoice3.getText().toString());
+        outState.putString("Button_4", mButtonChoice4.getText().toString());
+        Bitmap bitmap = ((BitmapDrawable)mImageView.getDrawable()).getBitmap();
+        outState.putParcelable("Bitmap", bitmap);
+
+    }
+
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mQuestionNumberView.setText(savedInstanceState.getString("Question_Number"));
+        mQuestionView.setText(savedInstanceState.getString("Question_View"));
+        mButtonChoice1.setText(savedInstanceState.getString("Button_1"));
+        mButtonChoice2.setText(savedInstanceState.getString("Button_2"));
+        mButtonChoice3.setText(savedInstanceState.getString("Button_3"));
+        mButtonChoice4.setText(savedInstanceState.getString("Button_4"));
+        Bitmap bitmap = (Bitmap) savedInstanceState.getParcelable("Bitmap");
+        mImageView.setImageBitmap(bitmap);
+
+    }
+
     public void updateQuestion() {
         mQuestionView.setText(mQuestions.getQuestion(mQuestionValue));
-        mImageView.setImageResource(mQuestions.getImageView[mQuestionValue]);
+        mImageView.setImageResource(mQuestions.getImageView[ mQuestionValue ]);
         mButtonChoice1.setText(mQuestions.getChoice1(mQuestionValue));
         mButtonChoice2.setText(mQuestions.getChoice2(mQuestionValue));
         mButtonChoice3.setText(mQuestions.getChoice3(mQuestionValue));
@@ -341,22 +368,5 @@ public class StartQuizActivity extends AppCompatActivity {
 
     public void updateQuestionNumber(int mQuestionNumber) {
         mQuestionNumberView.setText("Question " + mQuestionNumber + "/10");
-
     }
-
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-
-        // saving the content of textview using the key
-        outState.putInt("Question_Number", mQuestionNumber);
-        outState.putInt("Question_Value", mQuestionValue);
-    }
-
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        mQuestionNumber = savedInstanceState.getInt("Question_Number");
-        mQuestionValue = savedInstanceState.getInt("Question_Value");
-    }
-
-
 }

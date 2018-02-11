@@ -1,4 +1,7 @@
 package com.example.android.quiz;
+
+import android.os.Bundle;
+
 //questions, images and answers
 public class Questions {
 
@@ -15,7 +18,7 @@ public class Questions {
             "Which animal is faster than Usain Bolt?",
     };
 
-    private String mChoices [] [] = {
+    public String mChoices [] [] = {
             {"21 km", "34 km", "48 km", "62 km" },
             {"only hummingbirds can", "they can not", "yes, of course!", "only when they get scared"},
             {"to lure partners", "to get away from insects", "for body balance during jumps", "to play"},
@@ -69,5 +72,4 @@ public class Questions {
         String answer = mCorrectAnswers[a];
         return answer;
     }
-
 }
