@@ -44,12 +44,10 @@ public class StartQuizActivity extends AppCompatActivity {
     private int mQuestionNumber;
     public String name;
 
-
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_quiz);
-
 
         mScore = 0;
         mQuestionValue = 0;
@@ -57,7 +55,6 @@ public class StartQuizActivity extends AppCompatActivity {
 
         Intent cdName = getIntent();
         name = cdName.getStringExtra("user_name");
-
 
         mQuestionNumberView = (TextView) findViewById(R.id.question_number_view);
         mQuestionView = (TextView) findViewById(R.id.question);
@@ -225,11 +222,9 @@ public class StartQuizActivity extends AppCompatActivity {
                         startActivity(i);
                     } else {
                         updateQuestion();
-
                     }
 
                 } else {
-
                     // set the color red if answer is incorrect
                     mButtonChoice3.setBackgroundColor(getResources().getColor(R.color.my_red));
                     // change to original after 3 secs.
@@ -255,7 +250,6 @@ public class StartQuizActivity extends AppCompatActivity {
                         updateQuestion();
                     }
                 }
-
             }
         });
 
@@ -297,7 +291,6 @@ public class StartQuizActivity extends AppCompatActivity {
                     }
 
                 } else {
-
                     // set the color red if answer is incorrect
                     mButtonChoice4.setBackgroundColor(getResources().getColor(R.color.my_red));
                     // change to original after 3 secs.
@@ -310,7 +303,6 @@ public class StartQuizActivity extends AppCompatActivity {
                     Toast.makeText(StartQuizActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     mQuestionNumber = mQuestionNumber + 1;
                     updateQuestionNumber(mQuestionNumber);
-
 
                     if (mQuestionValue == Questions.mQuestions.length) {
                         Intent i = new Intent(StartQuizActivity.this, EndQuizActivity.class);
@@ -337,8 +329,6 @@ public class StartQuizActivity extends AppCompatActivity {
         outState.putString("Button_2", mButtonChoice2.getText().toString());
         outState.putString("Button_3", mButtonChoice3.getText().toString());
         outState.putString("Button_4", mButtonChoice4.getText().toString());
-        Bitmap bitmap = ((BitmapDrawable)mImageView.getDrawable()).getBitmap();
-        outState.putParcelable("Bitmap", bitmap);
     }
 
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
@@ -349,8 +339,6 @@ public class StartQuizActivity extends AppCompatActivity {
         mButtonChoice2.setText(savedInstanceState.getString("Button_2"));
         mButtonChoice3.setText(savedInstanceState.getString("Button_3"));
         mButtonChoice4.setText(savedInstanceState.getString("Button_4"));
-        Bitmap bitmap = (Bitmap) savedInstanceState.getParcelable("Bitmap");
-        mImageView.setImageBitmap(bitmap);
     }
 
     public void updateQuestion() {

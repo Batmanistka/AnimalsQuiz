@@ -1,47 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.android.quiz.MainActivity">
-
+    tools:context="com.example.android.quiz.MainActivity"
+    style="@style/scrollView">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/treeeeee"
-        android:scaleType="fitXY">
+        style="@style/startScreenLinear"
+        android:background="@drawable/treeeeee">
 
         <EditText
             android:id="@+id/edit_name"
-            android:layout_width="220dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="140dp"
-            android:layout_marginBottom="25dp"
-            android:background="#EEEEEE"
-            android:ems="10"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:hint="Your Name"
-            android:inputType="textPersonName|textCapWords"
-            android:textColor="#424242"
-            android:textSize="19dp"
-            android:textStyle="bold" />
+            style="@style/editName" />
 
         <Button
             android:id="@+id/start_button"
-            android:layout_below="@+id/edit_name"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Start Quiz"
-            android:background="#EEEEEE"
-            android:layout_marginBottom="4dp"
-            android:textSize="16dp"
-            android:textColor="#424242" />
+            style="@style/startButton"
+            android:text="@string/start_button">
+        </Button>
 
     </LinearLayout>
 

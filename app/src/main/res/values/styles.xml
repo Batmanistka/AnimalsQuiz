@@ -6,7 +6,140 @@
         <item name="colorPrimary">#1B5E20</item>
         <item name="colorPrimaryDark">#1B5E20</item>
         <item name="colorAccent">#1B5E20</item>
+    </style>
 
+    <style name="scrollView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="universalLinear">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="startScreenLinear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="imageLinear">
+        <item name="android:layout_width">380dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="relativeLinear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="editName">
+        <item name="android:layout_width">220dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">140dp</item>
+        <item name="android:layout_marginBottom">25dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">#EEEEEE</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:inputType">textPersonName|textCapWords</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:textColor">#424242</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:hint">Your Name</item>
+    </style>
+
+    <style name="startButton">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">#424242</item>
+        <item name="android:background">#EEEEEE</item>
+    </style>
+
+    <style name="questionNumber">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">#424242</item>
+    </style>
+
+    <style name="questionImage">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="questionText">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#424242</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="answerButtons">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginBottom">9dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">#424242</item>
+        <item name="android:background">#E0E0E0</item>
+    </style>
+
+    <style name="sumImage">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="sumTexts">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">#424242</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="retryButton">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">#424242</item>
+        <item name="android:background">#E0E0E0</item>
     </style>
 
 </resources>
+

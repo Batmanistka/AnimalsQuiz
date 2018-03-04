@@ -1,107 +1,55 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.quiz.StartQuizActivity">
+    tools:context="com.example.android.quiz.StartQuizActivity"
+    style="@style/scrollView">
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical">
+        style="@style/universalLinear">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="4dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingBottom="4dp">
+            style="@style/relativeLinear">
 
             <TextView
                 android:id="@+id/question_number_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:layout_gravity="center"
-                android:textSize="18dp"
-                android:textColor="#424242" />
+                style="@style/questionNumber" />
 
         </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="380dp"
-            android:layout_height="200dp"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_gravity="center">
+            style="@style/imageLinear">
 
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:scaleType="fitXY" />
+                style="@style/questionImage" />
 
         </LinearLayout>
 
         <TextView
             android:id="@+id/question"
-            android:layout_width="350dp"
-            android:layout_height="85dp"
-            android:textColor="#424242"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="20dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp" />
+            style="@style/questionText"/>
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical"
+            style="@style/universalLinear"
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
 
             <Button
                 android:id="@+id/answer_1"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:background="#E0E0E0"
-                android:layout_marginBottom="9dp"
-                android:textSize="15dp"
-                android:textColor="#424242" />
+                style="@style/answerButtons" />
 
             <Button
                 android:id="@+id/answer_2"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:background="#E0E0E0"
-                android:layout_marginBottom="9dp"
-                android:textSize="15dp"
-                android:textColor="#424242" />
+                style="@style/answerButtons" />
 
             <Button
                 android:id="@+id/answer_3"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:background="#E0E0E0"
-                android:layout_marginBottom="9dp"
-                android:textSize="15dp"
-                android:textColor="#424242" />
+                style="@style/answerButtons" />
 
             <Button
                 android:id="@+id/answer_4"
-                android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:background="#E0E0E0"
-                android:textSize="15dp"
-                android:textColor="#424242"
-                android:layout_marginBottom="16dp"
-                />
+                style="@style/answerButtons"
+                android:layout_marginBottom="16dp" />
 
         </LinearLayout>
 

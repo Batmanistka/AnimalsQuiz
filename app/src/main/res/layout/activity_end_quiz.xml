@@ -1,93 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.android.quiz.EndQuizActivity">
+    tools:context="com.example.android.quiz.EndQuizActivity"
+    style="@style/scrollView">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:orientation="vertical">
-
+        style="@style/universalLinear">
 
         <LinearLayout
-            android:layout_width="380dp"
-            android:layout_height="200dp"
-            android:orientation="horizontal"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center">
+            style="@style/imageLinear"
+            android:layout_marginTop="30dp">
 
             <ImageView
                 android:id="@+id/image"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
                 android:src="@drawable/cow"
-                android:scaleType="fitXY" />
+                style="@style/sumImage" />
 
         </LinearLayout>
 
         <TextView
             android:id="@+id/user_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:text="lajajajajjaj"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textColor="#424242"
-            android:textSize="20dp"/>
+            style="@style/sumTexts"/>
 
         <TextView
             android:id="@+id/result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:paddingTop="16dp"
-            android:text="heloo"
-            android:layout_gravity="center"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textColor="#424242"
-            android:textSize="20dp"/>
+            style="@style/sumTexts"/>
 
     <TextView
         android:id="@+id/congrats"
-        android:layout_width="350dp"
-        android:layout_height="85dp"
-        android:paddingBottom="8dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="8dp"
-        android:text="bye bye"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textColor="#424242"
-        android:textSize="20dp"/>
+        style="@style/sumTexts"
+        android:paddingTop="8dp" />
 
     <Button
         android:id="@+id/retry_button"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="12dp"
-        android:background="#E0E0E0"
-        android:text="Retry"
-        android:textSize="16dp"
-        android:textColor="#424242" />
+        style="@style/retryButton"
+        android:text="@string/retry_button" />
 
     </LinearLayout>
 
