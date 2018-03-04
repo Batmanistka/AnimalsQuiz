@@ -6,7 +6,7 @@
 
     <LinearLayout
         style="@style/startScreenLinear"
-        android:background="@drawable/treeeeee">
+        android:background="@drawable/treeeeeee">
 
         <EditText
             android:id="@+id/edit_name"

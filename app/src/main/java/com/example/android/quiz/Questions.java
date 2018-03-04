@@ -36,11 +36,9 @@ public class Questions {
     private String mCorrectAnswers [] = {"48 km", "only hummingbirds can", "for body balance during jumps",
             "whale and elephant", "dolphin", "up to 80%", "3 meters", "giraffe", "because they eat plankton and shrimp", "house cat"};
 
-
     public int[] getImageView = new int[]{
             R.drawable.cat, R.drawable.gesi, R.drawable.kangaroo, R.drawable.mis, R.drawable.seahorse,
             R.drawable.sloth, R.drawable.frog, R.drawable.tongue, R.drawable.flamingo, R.drawable.cheetah};
-
 
     public String getQuestion(int a) {
         String question = mQuestions[a];
@@ -66,7 +64,6 @@ public class Questions {
         String choice3 = mChoices[a] [3];
         return choice3;
     }
-
 
     public String getCorrectAnswer(int a) {
         String answer = mCorrectAnswers[a];
